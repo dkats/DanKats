@@ -1,7 +1,7 @@
 body {
 	font-family: arial;
-	background-color: #e2f3ff;
-	margin: 0px;
+	background-color: white;
+	margin: 0px 5%;
 }
 
 header {
@@ -14,6 +14,7 @@ header {
 	clear: left;
 	text-align: center;
 	font-weight: bold;
+	padding: 0px 5%;
 }
 
 .droprest {
@@ -51,7 +52,7 @@ footer {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	width: 100%;
+	width: 90%;
 	z-index: 2;
 	color: white;
 	background-color: #000066;
@@ -59,6 +60,7 @@ footer {
 	text-align: center;
 	font-size: 8pt;
 	font-weight: bold;
+	padding: 0px 5%;
 }
 
 h1 { 
@@ -121,6 +123,10 @@ h6 {
 	font-weight: bold;
 }
 
+p {
+	margin-left: 1em;
+}
+
 a {
 	cursor: pointer;
 }
@@ -176,6 +182,11 @@ ul.menu li.noclick:hover {
 	cursor: default;
 }
 
+ul.menu li.active {
+	background-color: #fcfcfc;
+	color: #0000a8;
+}
+
 .tooltip {
 	position: relative;
 	display: inline-block;
@@ -225,9 +236,10 @@ ul.menu li.noclick:hover {
 article {
 	display: inline-block;
 	position: fixed;
-	margin: 0px;
+	margin-right: 5%;
 	padding: 0px 28px;
 	top: 46px;
 	bottom: 32px;
 	overflow: auto;
+	background-color: #e2f3ff;
 }
