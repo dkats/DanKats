@@ -1,6 +1,6 @@
 body {
 	font-family: arial;
-	background-color: white;
+	background-color: #e2f3ff;
 	margin: 0px 5%;
 }
 
@@ -172,7 +172,7 @@ footer ul.menu li {
 }
 
 ul.menu li:hover:not(.active) {
-	background-color: #f1f1f1;
+	background-color: #e6d1fc;
 	color: black;
 }
 
@@ -183,7 +183,7 @@ ul.menu li.noclick:hover {
 }
 
 ul.menu li.active {
-	background-color: #fcfcfc;
+	background-color: #fbedff;
 	color: #0000a8;
 }
 
@@ -241,5 +241,7 @@ article {
 	top: 46px;
 	bottom: 32px;
 	overflow: auto;
-	background-color: #e2f3ff;
+	background-color: #fbedff;
+	border-right: 9px solid #d1dbff;
+	border-left: 9px solid #d1dbff;
 }
