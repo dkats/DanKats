@@ -5,5 +5,6 @@ document.write('	<li onclick="window.open(\'http://www.dankats.com/files/CV.pdf\
 document.write('	<li onclick="window.open(\'education.html\',\'_self\')" id="header_edu">Education</li>');
 document.write('	<li onclick="window.open(\'projects.html\',\'_self\')" id="header_proj">Projects</li>');
 document.write('	<li onclick="window.open(\'research.html\',\'_self\')" id="header_res">Research</li>');
+document.write('	<li onclick="window.open(\'extracurriculars.html\',\'_self\')" id="header_extracurr">Extracurriculars</li>');
 document.write('</ul>');
 document.write('</header>');

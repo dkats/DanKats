@@ -131,6 +131,23 @@ a {
 	cursor: pointer;
 }
 
+ul.dashed {
+	list-style-type: none;
+}
+
+ul.dashed > li {
+	text-indent: -1em;
+}
+
+ul.dashed > li:before {
+	content: "\2013\2000";
+	text-indent: -1em;
+}
+
+ul ul {
+	list-style-type: square;
+}
+
 .note {
 	font-weight: bold;
 }
