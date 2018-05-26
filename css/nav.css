@@ -17,6 +17,18 @@ nav ul li{
 	cursor: pointer;
 }
 
+nav ul li.category{
+	padding: 4pt 6pt;
+	cursor: default;
+	font-weight: bold;
+}
+
+nav ul ul li.category{
+	cursor: default;
+	font-weight: normal;
+	font-style: italic;
+}
+
 nav ul ul{
 	margin-left: 12pt;
 	padding: 0pt;
