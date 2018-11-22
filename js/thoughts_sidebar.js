@@ -12,6 +12,7 @@ function thoughts_sidebar(level = 0) {
 	document.write('			<ul>');
 	document.write('			<li onclick="window.open(\'' + dir + 'Electronic-Health-Wreck.html\',\'_self\');">Electronic Health Wreck</li>');
 	document.write('			<li onclick="window.open(\'' + dir + 'The-Executioner.html\',\'_self\');">The Executioner</li>');
+	document.write('			<li onclick="window.open(\'' + dir + 'Insuring-Poverty.html\',\'_self\');">Insuring Poverty</li>');
 	document.write('			</ul>');
 	// document.write('		<li class="category">General Thoughts</li>');
 	// document.write('			<ul>');
