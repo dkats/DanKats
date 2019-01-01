@@ -1,6 +1,6 @@
 document.write('<footer>');
 document.write('<ul class="menu">');
-document.write('	<li class="noclick">&copy 2018 Daniel Kats</li>');
+document.write('	<li class="noclick">&copy 2019 Daniel Kats</li>');
 document.write('	<li class="noclick">Designed by Dina Kats</li>');
 document.write('	<li style="float:right; padding:3px 8px;" onclick="window.open(\'https://twitter.com/dkats_premd\');">' +
 	'<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" class="footer-icon"><path opacity="0" d="M0 0h24v24H0z" />' +
