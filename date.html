@@ -6,7 +6,7 @@
 <meta name="author" content="Daniel J. Kats">
 
 <script>
-	var activities = ['Make a playlist and have a dance party', 'Do a puzzle', 'Questions', 'TED', 'Jeopardy'];
+	var activities = ['Make a playlist and have a dance party', 'Do a puzzle', 'Questions', 'TED', 'Jeopardy', 'Cards'];
 	var questions = [
 		"If you could change only one thing in your life, what would that be and why?",
 		"In a regular day, what do you find yourself thinking about the most?",
@@ -64,6 +64,7 @@
 		"Is there a silly accomplishment you've made that you're secretly proud of?",
 		"What's a silly habit you have now that you don't tell a lot of people about?"
 	];
+	var cards = ['Nerts', 'Kemps', 'Gin Rummy', 'Guts', 'Six Cards Golf', 'Bingo', 'Agram', 'Authors', 'Quadruple War', 'Anaconda Poker', 'Pepper', 'Egyptian Rat Screw', 'Cold Hands Poker', 'Cincinnati Poker', 'Spades with Jokers', 'Hollywood Eights', 'Sixty-Six', 'Forty-Five', 'Spoil Five', 'Tunk', 'Knock Rummy', 'Boat House Rum', 'Queen City Rum', 'In-Between'];
 
 	/**
 	 * Randomly shuffle an array
@@ -94,9 +95,11 @@
 
 	shuffle(activities);
 	shuffle(questions);
+	shuffle(cards);
 
 	var activityi = 0;
 	var questioni = 0;
+	var cardsi = 0;
 
 	function activitybutton() {
 		activityi += 1;
@@ -130,6 +133,10 @@
 				document.getElementById('stepbutton').style.display = 'none';
 				document.getElementById('step').innerHTML = '<em>"Alexa, play Jeopardy."</em>';
 				break;
+
+			case 'Cards':
+				document.getElementById('stepbutton').style.display = 'inline-block';
+				break;
 		}
 	}
 
@@ -159,6 +166,16 @@
 				break;
 
 			case 'Jeopardy':
+				break;
+
+			case 'Cards':
+				if(cardsi >= cards.length) {
+					document.getElementById('stepbutton').style.display = 'none';
+					document.getElementById('step').innerHTML = "We're out of games!";
+				} else {
+					document.getElementById('step').innerHTML = "<a href='https://www.bicyclecards.com/how-to-play/" + cards[cardsi].replace(/\s+/g, '-').toLowerCase() + "/' target='_blank'>" + cards[cardsi] + "</a>";
+				}
+				cardsi += 1;
 				break;
 		}
 	}
