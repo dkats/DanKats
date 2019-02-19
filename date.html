@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home Date</title>
+<link rel="stylesheet" type="text/css" href="css/plain.css">
+<meta name="author" content="Daniel J. Kats">
+
+<script>
+	var activities = ['Make a playlist and have a dance party', 'Do a puzzle', 'Questions', 'TED', 'Jeopardy'];
+	var questions = [
+		'If you could change only one thing in your life, what would that be and why?',
+		'In a regular day, what do you find yourself thinking about the most?',
+		'If you could write a song about your life, what type of music would you use?',
+		'What things in your life bring you the greatest pleasure?',
+		'What do you feel is your greatest accomplishment in your life? Did other people help to make that happen?',
+		'In what settings are you the happiest / eager / most comfortable?',
+		'What things do you look forward to each day? In your life?',
+		'If you had three wishes that would come true, what would they be?',
+		'What other things would you want to change now, and why?',
+		'What major regret do you have so far in your life? Is it too late to change it?',
+		'What would be my ideal romantic date?',
+		'Is there a belief or attitude that seems to interfere with creating or pursuing a big dream?',
+		'What are a couple of things that you appreciate about our relationship and why do these things seem significant?',
+		'In what situations do you feel most afraid or insecure?',
+		'What would you like to do outdoors that you have not done before? Are there any extreme sports that you’d like to try?',
+		'What country would you like to visit that you haven’t visited yet?',
+		'What family member did you most admire when you were a child?',
+		'What activities did your mother/father do that you most wish he’d taught you?',
+		'What do you most wish you’d learned from your mother/father?',
+		'Name 3 things that most excite your imagination when you imagine doing them?',
+		'What question about our money or future spending do you find hard to ask?',
+		'What are your favorite things to spend money on?',
+		'Who are you most envious of?'
+	];
+
+	/**
+	 * Randomly shuffle an array
+	 * https://stackoverflow.com/a/2450976/1293256
+	 * @param  {Array} array The array to shuffle
+	 * @return {String} The first item in the shuffled array
+	 */
+	var shuffle = function (array) {
+
+		var currentIndex = array.length;
+		var temporaryValue, randomIndex;
+
+		// While there remain elements to shuffle...
+		while (0 !== currentIndex) {
+			// Pick a remaining element...
+			randomIndex = Math.floor(Math.random() * currentIndex);
+			currentIndex -= 1;
+
+			// And swap it with the current element.
+			temporaryValue = array[currentIndex];
+			array[currentIndex] = array[randomIndex];
+			array[randomIndex] = temporaryValue;
+		}
+
+		return array;
+
+	};
+
+	shuffle(activities);
+	shuffle(questions);
+
+	var activityi = 0;
+	var questioni = 0;
+
+	function activitybutton() {
+		activityi += 1;
+		if(activityi >= activities.length) {
+			activityi = 0;
+		}
+		document.getElementById('nextactivity').innerHTML = 'Next activity ';
+		document.getElementById('activity').innerHTML = activities[activityi];
+		document.getElementById('nextstep').innerHTML = 'Start ';
+		document.getElementById('step').innerHTML = "";
+		
+		switch(activities[activityi]) {
+			case 'Make a playlist and have a dance party':
+				document.getElementById('stepbutton').style.display = 'none';
+				break;
+
+			case 'Do a puzzle':
+				document.getElementById('stepbutton').style.display = 'none';
+				break;
+
+			case 'Questions':
+				document.getElementById('stepbutton').style.display = 'inline-block';
+				break;
+
+			case 'TED':
+				document.getElementById('stepbutton').style.display = 'inline-block';
+				break;
+
+			case 'Jeopardy':
+				document.getElementById('stepbutton').style.display = 'none';
+				break;
+		}
+	}
+
+	function stepbutton() {
+		document.getElementById('nextstep').innerHTML = 'Next ';
+
+		switch(activities[activityi]) {
+			case 'Make a playlist and have a dance party':
+				break;
+
+			case 'Do a puzzle':
+				break;
+
+			case 'Questions':
+				if(questioni >= questions.length) {
+					document.getElementById('stepbutton').style.display = 'none';
+					document.getElementById('step').innerHTML = "We're out of questions!";
+				} else {
+					document.getElementById('step').innerHTML = questions[questioni];
+				}
+				questioni += 1;
+				break;
+
+			case 'TED':
+				document.getElementById('step').innerHTML = "<a href='https://www.ted.com/talks' target='_blank'>Click me</a>";
+				document.getElementById('stepbutton').style.display = 'none';
+				break;
+
+			case 'Jeopardy':
+				break;
+		}
+	}
+</script>
+</head>
+
+<body>
+<article>
+
+<h1>Welcome to the best home date ever</h1>
+
+<h2 id="activity"></h2>
+
+<h3 id="step"></h3>
+
+<button class="button" id="stepbutton" style="display: none; width: 175px; font-size: 24px;" onclick="stepbutton();"><span id="nextstep">Start </span></button>
+<br /><br /><br />
+<button class="button" id="activitybutton" style="width: 225px;" onclick="activitybutton();"><span id="nextactivity">Start </span></button>
+
+</article>
+</body>
+</html>
