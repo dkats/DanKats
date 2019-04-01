@@ -14,6 +14,7 @@ function header(level = 0) {
 	document.write('	<li onclick="window.open(\'' + dir + 'research.html\',\'_self\')" id="header_res">Research</li>');
 	document.write('	<li onclick="window.open(\'' + dir + 'hobbies.html\',\'_self\')" id="header_extracurr">Hobbies</li>');
 	document.write('	<li onclick="window.open(\'' + dir + 'thoughts.html\',\'_self\')" id="header_thoughts">My Thoughts</li>');
+	document.write('	<li onclick="window.open(\'' + dir + 'quotations.html\',\'_self\')" id="header_quotations">Quotations</li>');
 	document.write('</ul>');
 	document.write('</header>');
 }
