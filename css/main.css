@@ -266,6 +266,7 @@ article {
 	top: 46px;
 	bottom: 32px;
 	overflow: auto;
+	scroll-behavior: smooth;
 	background-color: #fbedff;
 	border-right: 9px solid #d1dbff;
 	border-left: 9px solid #d1dbff;
