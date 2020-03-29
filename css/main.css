@@ -278,15 +278,6 @@ article {
 	border-color: transparent;
 }
 
-div.image {
-	background-image:url(../files/Logo.png);
-	background-size: contain;
-	background-repeat: no-repeat;
-	width: 414px;
-	height: 237px;
-	display: inline-block;
-}​
-
 .latex {
 	font-family: serif;
 }
