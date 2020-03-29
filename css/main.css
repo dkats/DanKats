@@ -1,6 +1,6 @@
 body {
 	font-family: arial;
-	background-color: #e2f3ff;
+	background-color: white;
 	margin: 0px 5%;
 }
 
@@ -9,8 +9,8 @@ header {
 	right: 0;
 	left: 0;
 	z-index: 2;
-	color: white;
-	background-color: #000066;
+	color: #000066;
+	background-color: #edf1ff;
 	clear: left;
 	text-align: center;
 	font-weight: bold;
@@ -33,7 +33,7 @@ header {
 }
 
 .droprest:hover {
-	color: black;
+	color: #000066;
 	background-color: #f1f1f1;
 }
 
@@ -54,8 +54,8 @@ footer {
 	left: 0;
 	width: 90%;
 	z-index: 2;
-	color: white;
-	background-color: #000066;
+	color: #000066;
+	background-color: #edf1ff;
 	clear: left;
 	text-align: center;
 	font-size: 8pt;
@@ -64,7 +64,7 @@ footer {
 }
 
 .footer-icon {
-	fill: white;
+	fill: #000066;
 }
 
 h1 { 
@@ -131,12 +131,12 @@ p {
 	margin-left: 1em;
 }
 
-q {
-	font-style: italic;
-}
-
 a {
 	cursor: pointer;
+}
+
+q {
+	quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 ul.dashed {
@@ -185,7 +185,7 @@ ul.menu li {
 	float: left;
 	display: inline;
 	text-align: center;
-	color: white;
+	color: #000066;
 }
 
 header ul.menu li {
@@ -198,7 +198,7 @@ footer ul.menu li {
 
 ul.menu li:hover:not(.active) {
 	background-color: #e6d1fc;
-	color: black;
+	color: #000066;
 }
 
 ul.menu li.noclick:hover {
@@ -208,7 +208,7 @@ ul.menu li.noclick:hover {
 }
 
 ul.menu li.active {
-	background-color: #fbedff;
+	background-color: #fffbe0;
 	color: #0000a8;
 }
 
@@ -267,10 +267,25 @@ article {
 	bottom: 32px;
 	overflow: auto;
 	scroll-behavior: smooth;
-	background-color: #fbedff;
-	border-right: 9px solid #d1dbff;
-	border-left: 9px solid #d1dbff;
+	background-color: #fffef7;
+	border-right: 3px solid #edf1ff;
+	border-left: 3px solid #edf1ff;
 }
+
+#main_logo {
+	width: 100%;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+div.image {
+	background-image:url(../files/Logo.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 414px;
+	height: 237px;
+	display: inline-block;
+}​
 
 .latex {
 	font-family: serif;

@@ -2,9 +2,9 @@ nav {
 	position: fixed;
 	top: 46px;
 	bottom: 32px;
-	width: 15%;
+	width: 20%;
 	overflow: scroll;
-	background-color: #d1dbff;
+	background-color: #edf1ff;
 }
 
 nav ul{
@@ -41,10 +41,10 @@ nav ul ul li{
 }
 
 nav ul li:hover {
-	background-color: #fbedff;
+	background-color: #e6d1fc;
 	color: black;
 }
 
 article {
-	left: 20%;
+	left: 25%;
 }
