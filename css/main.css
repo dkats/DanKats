@@ -139,6 +139,10 @@ q {
 	quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
+.center {
+	text-align: center;
+}
+
 ul.dashed {
 	list-style-type: none;
 }
