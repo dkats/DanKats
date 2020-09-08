@@ -21,6 +21,7 @@ function thoughts_sidebar(level = 0) {
 	document.write('		<li class="category">MedEd</li>');
 	document.write('			<ul>');
 	document.write('			<li onclick="window.open(\'' + dir + 'CWRU-SOM.html\',\'_self\');">CWRU SOM (My Experience)</li>');
+	document.write('			<li onclick="window.open(\'' + dir + 'MGHfC.html\',\'_self\');">MGH<em>f</em>C (My Experience)</li>');
 	document.write('			</ul>');
 	// document.write('		<li class="category">General Thoughts</li>');
 	// document.write('			<ul>');
