@@ -11,7 +11,7 @@ function thoughts_sidebar(level = 0) {
 	document.write('		<li onclick="window.open(\'' + dir + 'Dream-Hospital.html\',\'_self\');">My Dream Hospital</li>');
 	document.write('		<li class="category">Patient Stories</li>');
 	document.write('			<ul>');
-	document.write('			<li onclick="window.open(\'' + dir + 'My-First-Death.html\',\'_self\');">My First Death</li>');
+	// document.write('			<li onclick="window.open(\'' + dir + 'My-First-Death.html\',\'_self\');">My First Death</li>');
 	document.write('			<li onclick="window.open(\'' + dir + 'Irreversible-Psychosis.html\',\'_self\');">Irreversible Psychosis</li>');
 	document.write('			<li onclick="window.open(\'' + dir + 'The-Executioner.html\',\'_self\');">The Executioner</li>');
 	document.write('			<li onclick="window.open(\'' + dir + 'Electronic-Health-Wreck.html\',\'_self\');">Electronic Health Wreck</li>');
