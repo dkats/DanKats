@@ -1,3 +1,12 @@
 p {
 	margin-left: 0em;
 }
+
+.phi {
+	font-style: italic;
+	color: red;
+}
+
+.phi:before {
+	content: "Note: All identifying information (including, but not limited to: diagnosis, physical characteristics, gender) was changed to protect privacy.";
+}
