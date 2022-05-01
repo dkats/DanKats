@@ -139,8 +139,18 @@ q {
 	quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
+ol.bib > li {
+	margin-bottom: 6pt;
+}
+
 .center {
 	text-align: center;
+}
+
+mark {
+	background-color: #d1dbff;
+	padding: 2pt;
+	border: solid 1px #2929b3;
 }
 
 ul.dashed {
@@ -306,3 +316,13 @@ article {
   margin-left: -0.36em;
   margin-right: -0.15em;
 }
+
+.inprogress:before {
+	content: "[In progress] ";
+}
+
+.inprogress {
+	font-style: italic;
+	color: #636363;
+}
+
