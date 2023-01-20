@@ -326,3 +326,12 @@ article {
 	color: #636363;
 }
 
+.accepted:before {
+	content: "[Accepted] ";
+	font-style: italic;
+}
+
+.accepted {
+/*	color: #636363;*/
+}
+
