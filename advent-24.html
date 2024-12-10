@@ -4,34 +4,105 @@
 <title>Advent '24 &ndash; Dan Kats</title>
 <meta name="author" content="Daniel J. Kats">
 <meta name="robots" content="none">
-<link rel="stylesheet" type="text/css" href="css/main.css">
+<style type="text/css">
+    article {
+        text-align: center;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 2.5em;
+        height: 1.25em;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        border-radius: 1em;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 0.8em;
+        width: 0.8em;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 50%;
+    }
+
+    input:checked + .slider {
+        background-color: #2196F3;
+    }
+
+    input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+        -webkit-transform: translateX(1em);
+        -ms-transform: translateX(1em);
+        transform: translateX(1em);
+    }
+</style>
 </head>
 <body>
 
-<article style="width:85%;">
+<article>
 
-<h1>Random Item Picker</h1>
-    <p>Click the button to display a random item from the list!</p>
-    <div id="randomItem">Your item will appear here</div>
-    <button onclick="showRandomItem()">Pick a Random Item</button>
+<h1>If I Ruled the World...</h1>
+
+    <span>Theme</span>&nbsp;&nbsp;
+    <label class="switch">
+        <input type="checkbox" id="toggleSwitch">
+        <span class="slider"></span>
+    </label>&nbsp;&nbsp;
+    <span>Prompt</span>
+    <br /><br />
+
+    <button onclick="showRandomItem()">Go!</button>
+    <br /><br />
+    <h2 id="randomItem"></h2>
 
     <script>
         const themes = ["Education", "Early childhood", "Social norms", "Environmental policy", "Healthcare", "Transportation", "Immigration", "Economic policy", "Work"];
         const prompts = [
-          "everyone would wear..."
-          "I would create a national holiday recognizing/celebrating..."
-          "everyone’s home would have..."
-          "all mornings would start with..."
-          "everyone would take time to..."
-          "everyone would have the ability to..."
-          "everyone would have to..."
+          "everyone would wear...",
+          "I would create a national holiday recognizing/celebrating...",
+          "everyone’s home would have...",
+          "all mornings would start with...",
+          "everyone would take time to...",
+          "everyone would have the ability to...",
+          "everyone would have to...",
           "it would be illegal to..."
         ];
 
         function showRandomItem() {
+            const isSwitchOn = document.getElementById('toggleSwitch').checked;
+
+            const items = isSwitchOn ? prompts : themes;
+
             const randomIndex = Math.floor(Math.random() * items.length);
             const randomItem = items[randomIndex];
-            document.getElementById('randomItem').innerText = randomItem;
+
+            document.getElementById('randomItem').innerText = (isSwitchOn ? "If I ruled the world, " : "") + randomItem;
         }
     </script>
 
